@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+    "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+    
+<tiles-definitions>  
+    <definition name="login" template="/WEB-INF/pages/login.jsp"/>
+    
+    <definition name="base.definition" template="/WEB-INF/pages/layout/template.jsp">
+    	<put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/pages/layout/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/pages/layout/menu.jsp" />
+        <put-attribute name="alerta" value="/WEB-INF/pages/layout/alerta.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/pages/layout/footer.jsp" />  
+    </definition>  
+
+    <definition name="dashboard" extends="base.definition">  
+        <put-attribute name="title" value="Dashboard" />  
+        <put-attribute name="body" value="/WEB-INF/pages/dashboard.jsp" />  
+    </definition> 
+    
+    <definition name="cadastro.funcionario" extends="base.definition">  
+        <put-attribute name="title" value="Funcionário" />  
+        <put-attribute name="body" value="/WEB-INF/pages/cadastro/funcionario.jsp" />  
+    </definition> 
+    
+    <definition name="cadastro.veiculo" extends="base.definition">  
+        <put-attribute name="title" value="Veículo" />  
+        <put-attribute name="body" value="/WEB-INF/pages/cadastro/veiculo.jsp" />  
+    </definition>
+    
+    <definition name="cadastro.viagem" extends="base.definition">  
+        <put-attribute name="title" value="Viagem" />  
+        <put-attribute name="body" value="/WEB-INF/pages/cadastro/viagem.jsp" />  
+    </definition>
+    
+    <definition name="relatorio.viagem" extends="base.definition">  
+        <put-attribute name="title" value="Relatório Viagem" />  
+        <put-attribute name="body" value="/WEB-INF/pages/relatorio/viagem.jsp" />  
+    </definition>
+    
+    <definition name="relatorio.pagamento" extends="base.definition">  
+        <put-attribute name="title" value="Relatório Pagamento" />  
+        <put-attribute name="body" value="/WEB-INF/pages/relatorio/pagamento.jsp" />  
+    </definition>
+</tiles-definitions>
